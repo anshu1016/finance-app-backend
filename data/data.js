@@ -1611,7 +1611,7 @@ export const kpis = [
       _id: "63bf7ccef03239e002001606",
       amount: "$154.37",
       buyer: "Jorrie Tidswell",
-      productIds: ["63bf7ac9f03239e002001604"],
+      productIds: ["63bf7ac9f03239e002001614"],
     },
     {
       _id: "63bf7ccef03239e002001607",
