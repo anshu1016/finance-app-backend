@@ -12,6 +12,8 @@ import productRoutes from "./routes/product.js";
 import Product from "./models/Product.js"
 import transactionRoutes from "./routes/transaction.js"
 import Transaction from "./models/Transaction.js";
+const { ObjectId } = mongoose.Types;
+
 /** CONFIGURATIONS */
 dotenv.config();
 const app = express();
@@ -53,7 +55,10 @@ mongoose
     //  if (existingTransactions.length === 0) {
     //   Transaction.insertMany(transactions);
     //  }
-     Transaction.insertMany(transactions);
+    //  Transaction.insertMany(transactions);
+    const objectId = new mongoose.Types.ObjectId('63bf7ccef03239e002001606');
+    await Transaction.deleteMany({ _id: objectId });
+    
     
   })
   .catch((error) => console.log(`DID NOT CONNECT: ${error}`));
